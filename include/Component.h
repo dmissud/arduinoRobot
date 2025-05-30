@@ -3,7 +3,7 @@
 
 #include <Arduino.h>
 
-#include "../src/CommandParser.h"
+#include "CommandParser.h"
 
 class Component {
 public:

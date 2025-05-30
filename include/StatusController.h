@@ -6,7 +6,7 @@
 #define STATUS_CONTROLLER_H
 
 #include <Arduino.h>
-#include "../src/CommandParser.h"
+#include "CommandParser.h"
 #include "Component.h"
 
 class StatusController final : public Component{

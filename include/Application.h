@@ -1,8 +1,8 @@
 #ifndef APPLICATION_H
 #define APPLICATION_H
 
-#include "../src/CommandParser.h"
-#include "../src/Component.h"
+#include "CommandParser.h"
+#include "Component.h"
 
 #define MAX_COMPONENTS 10
 
