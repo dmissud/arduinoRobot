@@ -22,7 +22,9 @@ void setup()
     app.addComponent(new StatusController());
     app.addComponent(new LEDController(12, "led"));
     app.addComponent(new ServoController(pwm, 0, "base"));
-    app.addComponent(new ServoController(pwm, 1, "s1"));
+    app.addComponent(new ServoController(pwm, 1, "elbow"));
+    app.addComponent(new ServoController(pwm, 2, "arm"));
+    app.addComponent(new ServoController(pwm, 3, "claw"));
 }
 
 void loop()
@@ -36,8 +38,6 @@ void loop()
         const CommandParser::ParsedCommand parsedCmd = CommandParser::parse(command);
         if (parsedCmd.isValid)
         {
-            // Afficher les détails de la commande (optionnel)
-            // CommandParser::printParsedCommand(parsedCmd);
 
             // Passer la commande à l'application
             app.run(parsedCmd);
