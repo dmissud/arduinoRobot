@@ -48,9 +48,6 @@ bool ServoController::processCommand(const CommandParser::ParsedCommand& command
             return false;
         }
         setAngle(angle);
-        Serial.print("Angle positionné à ");
-        Serial.print(angle);
-        Serial.println(" degrés");
 
         return true;
     }
@@ -65,7 +62,7 @@ void ServoController::setAngle(int angle) const {
 
     // Convertir l'angle en impulsion PWM
     uint16_t pulse = angleToPulse(angle);
-    Serial.print("Pulse positionné à ");
+    Serial.print("Ok: Pulse positionné à ");
     Serial.print(pulse);
     Serial.print(" us, ");
     // Positionner le servo
@@ -89,4 +86,6 @@ void ServoController::sweep() const {
         setAngle(angle);
         delay(50);
     }
+
+    Serial.println("Ok: Sweep terminé");
 }
