@@ -16,7 +16,7 @@ RobotSystem::RobotSystem() : m_app(), m_pwm() {
 }
 
 void RobotSystem::setup() {
-    Serial.begin(9600);
+    Serial.begin(115200);
     Wire.begin();
     
     // Initialisation I2C
